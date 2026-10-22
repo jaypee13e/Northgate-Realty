@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Northgate Realty | Find a home that fits your life</title>
+    <meta
+      name="description"
+      content="Browse homes, estimate your monthly payment and talk to a local agent."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="w">
+        <a class="logo" href="#top">Northgate Realty</a>
+        <nav>
+          <a href="#homes">Homes</a><a href="#calc">Calculator</a><a href="#agent">Your agent</a
+          ><a class="btn sm" href="#agent">Talk to Avery</a>
+        </nav>
+      </div>
+    </header>
+    <main id="top">
+      <div class="w hero">
+        <h1>Find the home that fits your life.</h1>
+        <p>
+          Browse local listings, see what your monthly payment could be, and tour with an agent who
+          answers the phone.
+        </p>
+        <a class="btn" href="#homes">Browse homes</a>
+      </div>
+
+      <section id="homes">
+        <div class="w">
+          <h2>Featured homes</h2>
+          <div class="bar">
+            <div>
+              <label for="q">Neighborhood or street</label
+              ><input id="q" type="search" placeholder="e.g. Riverside" />
+            </div>
+            <div>
+              <label for="ty">Type</label
+              ><select id="ty">
+                <option value="">Any</option>
+                <option>House</option>
+                <option>Condo</option>
+                <option>Townhouse</option>
+              </select>
+            </div>
+            <div>
+              <label for="bd">Bedrooms</label
+              ><select id="bd">
+                <option value="0">Any</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+              </select>
+            </div>
+            <div>
+              <label for="mp">Max price: <span id="mpv"></span></label
+              ><input
+                id="mp"
+                type="range"
+                min="200000"
+                max="1500000"
+                step="25000"
+                value="1500000"
+              />
+            </div>
+            <div>
+              <label for="so">Sort</label
+              ><select id="so">
+                <option value="">Newest</option>
+                <option value="lo">Price, low to high</option>
+                <option value="hi">Price, high to low</option>
+              </select>
+            </div>
+          </div>
+          <div class="meta">
+            <span id="rc"></span
+            ><button class="chip" id="sv" aria-pressed="false">
+              Show saved homes (<span id="sc">0</span>)
+            </button>
+          </div>
+          <div class="grid" id="grid"></div>
+        </div>
+      </section>
+
+      <section id="calc">
+        <div class="w">
+          <h2>Mortgage calculator</h2>
+          <div class="two">
+            <div class="card">
+              <div class="f">
+                <label for="cp">Home price ($)</label
+                ><input id="cp" type="number" min="0" step="5000" value="450000" />
+              </div>
+              <div class="f">
+                <label for="cd">Down payment: <span id="cdv"></span></label
+                ><input id="cd" type="range" min="3" max="50" value="20" />
+              </div>
+              <div class="f">
+                <label for="cr">Interest rate (% per year)</label
+                ><input id="cr" type="number" min="0" max="20" step="0.05" value="6.5" />
+              </div>
+              <div class="f">
+                <label for="ct">Loan term</label
+                ><select id="ct">
+                  <option value="30">30 years</option>
+                  <option value="20">20 years</option>
+                  <option value="15">15 years</option>
+                </select>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Estimated monthly payment</h3>
+              <div class="big" id="cm"></div>
+              <p class="note">Principal and interest only. Taxes, insurance and fees are extra.</p>
+              <div id="cb"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="agent">
+        <div class="w">
+          <h2>Meet your agent</h2>
+          <div class="two">
+            <div>
+              <p>
+                Hi, I’m Avery Collins. I’ve helped families, first-time buyers and investors across
+                the city for over ten years. I’ll tell you the truth about a home, even when it’s
+                not what you hoped to hear.
+              </p>
+              <p class="note">Licensed realtor. Replies within one business day.</p>
+            </div>
+            <div class="card">
+              <blockquote style="margin: 0">
+                “Avery found us a place before it hit the market and talked us through every step.”
+                <footer class="note" style="margin-top: 8px">The Nguyen family</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="pitch">
+      <div class="w">
+        <div>
+          <strong>Want a website like this for your real estate business?</strong>
+          <p>
+            Demo site designed and built by <span id="devname"></span>. Filters, calculators and
+            lead forms that work.
+          </p>
+        </div>
+        <a class="btn" id="devmail" href="#">Get a free quote</a>
+      </div>
+    </div>
+    <footer class="fo">
+      <div class="w">
+        © Northgate Realty. This is a demo business made for portfolio purposes. Listings are
+        fictional.
+      </div>
+    </footer>
+    <dialog id="dlg"><div class="dlg" id="body"></div></dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
